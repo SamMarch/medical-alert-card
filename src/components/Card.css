@@ -1,0 +1,150 @@
+.mac-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.mac-cardwrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.mac-face-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #5a6472;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mac-card {
+  width: 85.6mm;
+  height: 54mm;
+  background: #fff;
+  color: #1a2230;
+  border: 1px solid #d8dde3;
+  border-radius: 3.2mm;
+  overflow: hidden;
+  position: relative;
+  padding: 5mm 5.4mm;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.mac-info-mark {
+  width: 6.4mm;
+  height: 6.4mm;
+  border-radius: 50%;
+  background: var(--mac-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 4.4mm;
+  line-height: 1;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
+  margin-bottom: 2.2mm;
+  flex: none;
+}
+
+.mac-headline {
+  font-size: 7.4mm;
+  line-height: 1.02;
+  font-weight: 800;
+  color: var(--mac-accent);
+  letter-spacing: -0.01em;
+  margin: 0 0 2.4mm;
+}
+
+.mac-reassure {
+  font-size: 3.5mm;
+  line-height: 1.32;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mac-front-foot {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3mm;
+}
+
+.mac-patient {
+  font-size: 3.05mm;
+  line-height: 1.25;
+  color: #5a6472;
+  margin: 0;
+}
+
+.mac-name-front {
+  font-size: 3.05mm;
+  font-weight: 700;
+  color: #1a2230;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.mac-eyebrow {
+  font-size: 2.5mm;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--mac-accent);
+  margin: 0 0 1.8mm;
+}
+
+.mac-help {
+  font-size: 2.95mm;
+  line-height: 1.34;
+  margin: 0 0 3mm;
+}
+
+.mac-band {
+  margin-top: auto;
+  background: var(--mac-accent-tint);
+  border-radius: 2mm;
+  padding: 2.6mm 3mm;
+  line-height: 1.3;
+}
+
+.mac-band-label {
+  font-size: 2.4mm;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mac-accent);
+  margin: 0 0 1mm;
+}
+
+.mac-contact {
+  font-size: 3.2mm;
+  font-weight: 700;
+  margin: 0 0 1mm;
+}
+
+.mac-sep {
+  color: var(--mac-accent);
+  font-weight: 700;
+  margin: 0 1mm;
+}
+
+.mac-med {
+  font-size: 2.5mm;
+  line-height: 1.3;
+  color: #5a6472;
+  margin: 1.2mm 0 0;
+}
+
+.mac-ph {
+  color: #9aa3af;
+  font-style: italic;
+  font-weight: 600;
+}
