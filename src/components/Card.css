@@ -148,3 +148,36 @@
   font-style: italic;
   font-weight: 600;
 }
+
+/* ---------- print ---------- */
+@media print {
+  @page {
+    size: auto;
+    margin: 14mm;
+  }
+
+  /* Remove app chrome (heading + form) so only the cards print */
+  .mac-no-print {
+    display: none !important;
+  }
+
+  /* Hide the small FRONT / BACK labels above each card */
+  .mac-face-label {
+    display: none !important;
+  }
+
+  .mac-stage {
+    gap: 9mm;
+  }
+
+  /* Print the accent colours + tinted band, add a faint cut guide,
+     and keep each card from splitting across pages */
+  .mac-card {
+    border: 0.3mm dashed #aab2bc !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

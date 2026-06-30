@@ -2,9 +2,9 @@ const labelText = 'block text-xs font-semibold text-slate-500 mb-1.5'
 const inputClass =
   'w-full text-sm px-3 py-2 border border-slate-300 rounded-lg text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500'
 
-export function CardForm({ conditions, values, medAvailable, onChange }) {
+export function CardForm({ conditions, values, medAvailable, onPrint, onChange }) {
   return (
-    <div className="w-full lg:w-80 lg:flex-none bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+    <div className="mac-no-print w-full lg:w-80 lg:flex-none bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
       <h2 className="text-base font-semibold text-slate-800 mb-1">Card details</h2>
       <p className="text-sm text-slate-500 mb-5 leading-relaxed">
         Fill these in, then print. Nothing is saved or sent anywhere — it all stays in your browser.
@@ -82,6 +82,22 @@ export function CardForm({ conditions, values, medAvailable, onChange }) {
           />
           <span>Include “or call 000”</span>
         </label>
+      </div>
+
+      <div className="mt-6">
+        <button
+          type="button"
+          onClick={onPrint}
+          className="w-full bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold py-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2"
+        >
+          Print card
+        </button>
+        <p className="text-xs text-slate-500 leading-relaxed mt-3">
+          <span className="font-semibold text-slate-600">Printing tip:</span> use
+          card or photo paper if you can. The two faces print one above the other —
+          cut them out and glue back-to-back, then laminate or slip into a small
+          pouch for durability.
+        </p>
       </div>
     </div>
   )

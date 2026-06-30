@@ -31,10 +31,14 @@ function App() {
     conditions.find((c) => c.id === form.conditionId) ?? conditions[0]
   const medAvailable = condition.options?.medication?.available ?? false
 
+  function handlePrint() {
+    window.print()
+  }
+
   return (
     <div className="min-h-screen bg-slate-100 py-10 px-4">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-2xl font-bold text-slate-800 mb-8 text-center">
+        <h1 className="mac-no-print text-2xl font-bold text-slate-800 mb-8 text-center">
           Medical alert card
         </h1>
         <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
@@ -42,6 +46,7 @@ function App() {
             conditions={conditions}
             values={form}
             medAvailable={medAvailable}
+            onPrint={handlePrint}
             onChange={updateField}
           />
           <div className="flex-1 flex justify-center w-full">
