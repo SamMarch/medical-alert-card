@@ -1,5 +1,12 @@
 import './Card.css'
 
+// Gently title-cases a name for display: capitalises the first letter of each
+// word without lowercasing the rest, so "sam march" -> "Sam March" while names
+// like "McDonald" and "O'Brien" are preserved.
+function titleCaseName(value) {
+  return value.replace(/(^|[\s'-])([a-z])/g, (match, sep, char) => sep + char.toUpperCase())
+}
+
 function buildEmergencyLine(condition, showMedication, show000) {
   const med = condition.options?.medication
   const medText = showMedication && med?.available ? med.text : null
@@ -25,8 +32,8 @@ export function Card({
     '--mac-accent-tint': condition.accentTint,
   }
 
-  const trimmedName = name.trim()
-  const trimmedEcName = emergencyName.trim()
+  const trimmedName = titleCaseName(name.trim())
+  const trimmedEcName = titleCaseName(emergencyName.trim())
   const trimmedEcPhone = emergencyPhone.trim()
   const emergencyLine = buildEmergencyLine(condition, showMedication, show000)
 
