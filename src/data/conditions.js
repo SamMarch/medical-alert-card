@@ -46,6 +46,30 @@ export const conditions = [
       },
     },
   },
+  {
+    id: 'epilepsy',
+    name: 'Epilepsy',
+    accent: '#6d28d9',
+    accentTint: '#efe9fb',
+    front: {
+      headline: 'I have epilepsy',
+      reassurance:
+        'If I seem confused, vacant or am shaking, I may be having a seizure — not drunk or affected by drugs.',
+      footer: 'Please stay with me.',
+    },
+    back: {
+      helpLabel: 'If I have a seizure',
+      helpText:
+        'Stay calm and time it. Cushion my head and move hard objects away. Do not restrain me or put anything in my mouth. When it stops, roll me onto my side. Call 000 if it lasts over 5 minutes, repeats, or I do not wake.',
+    },
+    options: {
+      medication: {
+        available: true,
+        defaultOn: true,
+        text: 'I take medication on a strict schedule — please help me take it on time.',
+      },
+    },
+  },
 ]
 
 // The preset selected by default when the app first loads.
